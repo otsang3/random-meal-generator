@@ -20,8 +20,8 @@ function MealDetails() {
     return(
         <div className="flex-column">
             <div className="flex-row">
-                 <img src={meal.meals[0].strMealThumb} width="500" height="500"/>
-            <div>
+                 <img src={meal.meals[0].strMealThumb} width="450" height="450"/>
+            <div className="flex-item">
                 <h2>{meal.meals[0].strMeal}</h2>
                 <p>{meal.meals[0].strInstructions}</p>
             </div>
@@ -31,6 +31,13 @@ function MealDetails() {
                 <ul>
                     {ingredients.map(ingredient => <li>{ingredient}</li>)}
                 </ul>
+            </div>
+            <div>
+                <h3>Video Tutorial</h3>
+                <iframe 
+                width="853" 
+                height="505"
+                src={`https://www.youtube.com/embed/${meal.meals[0].strYoutube.slice(-11)}`}></iframe>
             </div>
         </div>
         

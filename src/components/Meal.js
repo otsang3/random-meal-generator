@@ -18,8 +18,10 @@ function Meal() {
 
     return(
         <div>
-            <p>Need some inspiration? Click below button to generate a random meal!</p>
-            <button onClick={() => handleClick()}>Get Meal</button>
+            <div className="flex-column">
+                <h3>Need some inspiration? Click below button to generate a random meal!</h3>
+                <button onClick={() => handleClick()}>Get Meal</button>
+            </div>
             <MealContext.Provider value={meal}>
                 {meal !== null && <MealDetails/>}
             </MealContext.Provider>
