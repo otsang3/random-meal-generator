@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
 
     return(
-        <p>Header.js</p>
+        <h1 className="header">Random Meal Generator</h1>
     )
 }
 
